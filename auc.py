@@ -9,7 +9,7 @@ class AUCUtil:
     def add(self, loss, g=np.array([]), p=np.array([])):
         self.loss.append(loss)
         self.ground_truth += g.flatten().tolist()
-        self.prediction = p.flatten().tolist()
+        self.prediction += p.flatten().tolist()
 
     def calc(self):
         return {
